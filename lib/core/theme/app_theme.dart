@@ -50,69 +50,69 @@ class AppTheme {
 extension ThemeExtension on ThemeData {
   /// ================= Accent =================
 
-  Color get accPrimary => brightness == Brightness.light
+  Color get accPrimaryE84030 => brightness == Brightness.light
       ? LightColor.accPrimary
       : DarkColor.accPrimary;
 
-  Color get accHover => brightness == Brightness.light
+  Color get accHoverFF6B35 => brightness == Brightness.light
       ? LightColor.accHover
       : DarkColor.accHover;
 
   /// ================= Background =================
 
-  Color get bgBase => brightness == Brightness.light
+  Color get bgBase0F0F0F => brightness == Brightness.light
       ? LightColor.bgBase
       : DarkColor.bgBase;
 
-  Color get bgSurface => brightness == Brightness.light
+  Color get bgSurface1A1A1A => brightness == Brightness.light
       ? LightColor.bgSurface
       : DarkColor.bgSurface;
 
-  Color get bgElevated => brightness == Brightness.light
+  Color get bgElevated242424 => brightness == Brightness.light
       ? LightColor.bgElevated
       : DarkColor.bgElevated;
 
-  Color get bgOverlay => brightness == Brightness.light
+  Color get bgOverlay2E2E2E => brightness == Brightness.light
       ? LightColor.bgOverlay
       : DarkColor.bgOverlay;
 
   /// ================= Typography =================
 
-  Color get textPrimary => brightness == Brightness.light
+  Color get textPrimaryF5F3EF => brightness == Brightness.light
       ? LightColor.textPrimary
       : DarkColor.textPrimary;
 
-  Color get textSecondary => brightness == Brightness.light
+  Color get textSecondaryAAAAAA => brightness == Brightness.light
       ? LightColor.textSecondary
       : DarkColor.textSecondary;
 
-  Color get textHint => brightness == Brightness.light
+  Color get textHint666666 => brightness == Brightness.light
       ? LightColor.textHint
       : DarkColor.textHint;
 
   /// ================= Special =================
 
-  Color get gold => brightness == Brightness.light
+  Color get goldC9A84C => brightness == Brightness.light
       ? LightColor.gold
       : DarkColor.gold;
 
   /// ================= Badges =================
 
-  Color get badgeSuper => brightness == Brightness.light
+  Color get badgeSuper7C3AED => brightness == Brightness.light
       ? LightColor.badgeSuper
       : DarkColor.badgeSuper;
 
-  Color get badgeRare => brightness == Brightness.light
+  Color get badgeRareB45309 => brightness == Brightness.light
       ? LightColor.badgeRare
       : DarkColor.badgeRare;
 
-  Color get badgeStd => brightness == Brightness.light
+  Color get badgeStd374151 => brightness == Brightness.light
       ? LightColor.badgeStd
       : DarkColor.badgeStd;
 
   /// ================= Border =================
 
-  Color get border => brightness == Brightness.light
+  Color get border2E2E2E => brightness == Brightness.light
       ? LightColor.border
       : DarkColor.border;
 }
