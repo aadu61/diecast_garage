@@ -204,6 +204,19 @@ const DieCastCarSchema = CollectionSchema(
         )
       ],
     ),
+    r'scale': IndexSchema(
+      id: -5123743541361466776,
+      name: r'scale',
+      unique: false,
+      replace: false,
+      properties: [
+        IndexPropertySchema(
+          name: r'scale',
+          type: IndexType.hash,
+          caseSensitive: true,
+        )
+      ],
+    ),
     r'cardNumber': IndexSchema(
       id: 8692631350741394952,
       name: r'cardNumber',
@@ -747,6 +760,71 @@ extension DieCastCarQueryWhere
               indexName: r'brand',
               lower: [],
               upper: [brand],
+              includeUpper: false,
+            ));
+      }
+    });
+  }
+
+  QueryBuilder<DieCastCar, DieCastCar, QAfterWhereClause> scaleIsNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addWhereClause(IndexWhereClause.equalTo(
+        indexName: r'scale',
+        value: [null],
+      ));
+    });
+  }
+
+  QueryBuilder<DieCastCar, DieCastCar, QAfterWhereClause> scaleIsNotNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addWhereClause(IndexWhereClause.between(
+        indexName: r'scale',
+        lower: [null],
+        includeLower: false,
+        upper: [],
+      ));
+    });
+  }
+
+  QueryBuilder<DieCastCar, DieCastCar, QAfterWhereClause> scaleEqualTo(
+      String? scale) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addWhereClause(IndexWhereClause.equalTo(
+        indexName: r'scale',
+        value: [scale],
+      ));
+    });
+  }
+
+  QueryBuilder<DieCastCar, DieCastCar, QAfterWhereClause> scaleNotEqualTo(
+      String? scale) {
+    return QueryBuilder.apply(this, (query) {
+      if (query.whereSort == Sort.asc) {
+        return query
+            .addWhereClause(IndexWhereClause.between(
+              indexName: r'scale',
+              lower: [],
+              upper: [scale],
+              includeUpper: false,
+            ))
+            .addWhereClause(IndexWhereClause.between(
+              indexName: r'scale',
+              lower: [scale],
+              includeLower: false,
+              upper: [],
+            ));
+      } else {
+        return query
+            .addWhereClause(IndexWhereClause.between(
+              indexName: r'scale',
+              lower: [scale],
+              includeLower: false,
+              upper: [],
+            ))
+            .addWhereClause(IndexWhereClause.between(
+              indexName: r'scale',
+              lower: [],
+              upper: [scale],
               includeUpper: false,
             ));
       }

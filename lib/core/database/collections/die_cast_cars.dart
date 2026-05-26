@@ -23,6 +23,7 @@ class DieCastCar {
 
   String? manufacturer;
 
+  @Index()
   String? scale;
 
   int? releaseYear;
