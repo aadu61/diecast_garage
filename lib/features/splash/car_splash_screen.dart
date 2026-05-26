@@ -1,6 +1,10 @@
 import 'dart:math' as math;
+import 'package:diecast_garage/routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'dart:math';
+
+import 'package:get/get_core/src/get_main.dart';
 
 class CarSplash extends StatefulWidget {
   const CarSplash({super.key});
@@ -70,6 +74,25 @@ class _CarSplashState extends State<CarSplash>
     WidgetsBinding.instance.addPostFrameCallback((_) {
       controller.forward();
     });
+
+    listenerForAnimation();
+
+  }
+
+  void listenerForAnimation() {
+    controller.addListener((){
+
+      if(controller.isCompleted){
+        Get.offNamed(AppRoutes.dashBoardScreen);
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    controller.dispose();
   }
 
   @override
