@@ -586,6 +586,28 @@ class CommonFunctions {
     }
   }
 
+  static Widget backButton({required ThemeData theme,  Null Function()? onTap}){
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: onTap ?? (){
+        Get.back();
+      },
+      child: Container(
+        width: 28.sp,
+        height: 28.sp,
+        decoration: BoxDecoration(
+          color: theme.bgElevated242424,
+          borderRadius: BorderRadius.circular(14.sp),
+          border: Border.all(color: theme.border2E2E2E,width: 1.sp)
+        ),
+        child: Padding(
+          padding: EdgeInsets.only(left: 7,right: 8),
+          child: Icon(Icons.arrow_back_ios_new,color: theme.textPrimaryF5F3EF,size: 10.sp,),
+        ),
+      ),
+    );
+  }
+
 }
 
 

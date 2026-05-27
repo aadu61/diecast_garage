@@ -1,6 +1,7 @@
 import 'package:diecast_garage/features/dashboard/views/dashboard_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import '../../garage/view/garage_screen.dart';
 
 class DashboardController extends GetxController{
 
@@ -9,7 +10,7 @@ class DashboardController extends GetxController{
 
   final List pages = [
     DashboardView(),
-    Container(),
+    GarageScreen(),
     Container(),
     Container(),
   ];
